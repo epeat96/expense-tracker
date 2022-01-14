@@ -33,6 +33,7 @@ button.onclick = function(){
 
     buttonId = buttonId + 1;
     button.setAttribute('id',buttonId);
+    button.setAttribute('onclick','deleteRow('+buttonId+')');
     descriptionText.innerHTML = description.value;
     descriptionDiv.appendChild(descriptionText);
     descriptionDiv.setAttribute('id','descriptionDiv'+buttonId);
@@ -58,3 +59,17 @@ button.onclick = function(){
     amount.value = '';
     price.value = '';
 };
+
+function deleteRow(button){
+    var button = document.getElementById(button);
+    var descriptionDiv = document.getElementById('descriptionDiv'+button.id);
+    var amountDiv = document.getElementById('amountDiv'+button.id);
+    var priceDiv = document.getElementById('priceDiv'+button.id);
+    var buttonDiv = document.getElementById('buttonDiv'+button.id);
+
+    gridContainer.removeChild(buttonDiv);
+    gridContainer.removeChild(descriptionDiv);
+    gridContainer.removeChild(amountDiv);
+    gridContainer.removeChild(priceDiv);
+}
+
