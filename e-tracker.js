@@ -7,6 +7,21 @@ var buttonId = 0
 
 button.onclick = function(){
 
+    if (description.value == ''){
+        alert('Please enter a description!');
+        return
+    }
+
+    if (amount.value == ''){
+        alert('Please enter an amount!');
+        return
+    }
+
+    if (price.value == ''){
+        alert('Please enter a price!');
+        return
+    }
+
     var descriptionDiv = document.createElement('div');
     var descriptionText = document.createElement('p');
     var amountDiv = document.createElement('div');
