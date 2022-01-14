@@ -3,6 +3,7 @@ var button = document.getElementById('add');
 var description = document.getElementById('description');
 var amount = document.getElementById('amount');
 var price = document.getElementById('price');
+var buttonId = 0
 
 button.onclick = function(){
 
@@ -15,7 +16,8 @@ button.onclick = function(){
     var buttonDiv = document.createElement('div');
     var button = document.createElement('button');
 
-
+    buttonId = buttonId + 1;
+    button.setAttribute('id',buttonId);
     descriptionText.innerHTML = description.value;
     descriptionDiv.appendChild(descriptionText);
     gridContainer.appendChild(descriptionDiv);
