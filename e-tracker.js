@@ -20,18 +20,22 @@ button.onclick = function(){
     button.setAttribute('id',buttonId);
     descriptionText.innerHTML = description.value;
     descriptionDiv.appendChild(descriptionText);
+    descriptionDiv.setAttribute('id','descriptionDiv'+buttonId);
     gridContainer.appendChild(descriptionDiv);
 
     amountText.innerHTML = amount.value;
     amountDiv.appendChild(amountText);
+    amountDiv.setAttribute('id','amountDiv'+buttonId);
     gridContainer.appendChild(amountDiv);
 
     priceText.innerHTML = price.value;
     priceDiv.appendChild(priceText);
+    priceDiv.setAttribute('id','priceDiv'+buttonId);
     gridContainer.appendChild(priceDiv);
 
     button.innerHTML = 'delete'
     buttonDiv.appendChild(button);
+    buttonDiv.setAttribute('id','buttonDiv'+buttonId);
     gridContainer.appendChild(buttonDiv);
 
 
