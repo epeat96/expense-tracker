@@ -1,19 +1,35 @@
 .grid-container {
   display: inline-grid;
   grid-template-columns: auto auto auto auto;
-  grid-row-gap: 3vh;
-  grid-column-gap: 3vw;
+  border: 1px, solid black;
+  width: 40vw;
+}
+
+.grid-container2 {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-auto-columns: fit-content();
+  border: 1px, solid black;
+  text-align: left;
+  width: 40vw;
+}
+
+.grid-item{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
- font-size: 5vw;
+ font-size: 3vw;
 }
 
 #description{
     width: 20vw;
 }
 
-#price, #amount{
+#price, #amount, #add{
     width:5vw;
 }
 
