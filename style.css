@@ -1,15 +1,13 @@
 .grid-container {
   display: inline-grid;
   grid-template-columns: auto auto auto auto;
-  border: 1px, solid black;
   width: 40vw;
 }
 
 .grid-container2 {
   display: inline-grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: min-content auto;
   grid-auto-columns: fit-content();
-  border: 1px, solid black;
   text-align: left;
   width: 40vw;
 }
